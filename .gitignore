@@ -36,3 +36,4 @@ web/epub_temp
 web/*.epub
 **/*~
 **/*/*~
+**/*.bak
