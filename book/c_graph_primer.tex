@@ -35,13 +35,37 @@ Weighted graphs(权重图), Hypergraphs(混合图). 前三者都好理解，最�
 用$(u,v)$表示。对于无向的情况，$(u,v)$与$(v,u)$相同。图中通常把顶点可视化为
 圆或矩形，把边可视化为线段或曲线，用于把圆或矩形连接起来。
 
+\textbf{连通图}: If a path exists between any two pairs of vertices in a 
+graph, then that graph is \textit{connected}.
 % 
 % Artificial Intelligence (based on copy from my thesis)
 % 
-\subsection{Artificial Intelligence}
-\label{sec:artificial_intelligence}
-\index{Artificial Intelligence}
+\subsection{标准数据结构}
+\label{sec:standard_data_structures}
+\index{Standard Data Structures}
+图的常见数据结构有两种：
+邻接链表(adjacency list)和邻接矩阵(adjacency matrix).
 
+\subsection{Storage Issues}
+Adjacency matrix using a two-dimensional matrix to represent potential 
+relationships among $n$ elements in a set. First, the matrix requires
+$n^2$ elements of storage, yet there are times when the number of 
+relationships is much smaller(当是稀疏矩阵的时候，空间利用率很低).
+In these cases \-- known as \textit{sparse} graphs(稀疏图) \--it may be
+impossible to store large graphs with more than several thousand vertices
+because of the limitations of computer memory. 
+Second, matrices are unsuitable when there may be multiple relationships
+between a pair of elements. To store there relationships in a matrix,
+each element would become a list, and the abstraction of $A[i][j]$ being
+the $ij^{th}$ element breaks.
+
+关于稀疏图，有个例子。2005年，国际机场协会(Airports Council International,
+ACI)报导说全球一共有1659个机场，用邻接矩阵存储，则是2,752,281个矩阵元素。
+那么“How many of these entries has a value?”大概是这些机场利用率如何？
+ACI报导说2005年共计有71.6 million 的航空活动，简单且粗暴地转换，则可以认为
+每天有(71.6 million/365)= 196,164次航班，即使认为这些航班都是直达的，也就是
+中途不会在别的机场停下来，这整个的机场利用率也只有(196,164/2,752,281 = 0.07127324571873293460951116546603),空闲率达到了93\%,因此，这是一个典型的
+稀疏图实例。
 
 % change title of bib to references
 
