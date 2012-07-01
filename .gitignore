@@ -16,6 +16,7 @@ book/*.out
 book/*.log
 book/*.synctex.gz
 book/graphics/*
+workspace/*
 workspace/**/*.bbl
 workspace/**/*.blg
 workspace/**/*.toc
@@ -31,6 +32,7 @@ deprecated/**/*.pdf
 deprecated/**/*.out
 deprecated/**/*.log
 !workspace/release/*.pdf
+src/*
 src/algorithms/*.log
 web/docs
 web/epub_temp
