@@ -1,0 +1,43 @@
+% The Clever Algorithms Project: http://www.CleverAlgorithms.com
+% (c) Copyright 2010 Jason Brownlee. Some Rights Reserved. 
+% This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 2.5 Australia License.
+
+% This is a chapter
+
+
+% Argument and background information the user requires to read and understand the book
+\chapter{图的算法基本概念}
+\label{chap:graph-primer}
+
+图(graph)是由对象(称为顶点)集合及它们之间的连接集合组成。图的应用领域很广，
+包括绘图(地理信息系统)、运输(道路网络和航班网络)、电子工程(电路中)和计算网络
+(因特网互联中)。
+
+
+% 
+% What is AI
+% 
+\section{图的表示}
+\label{intro:sec:graph:presentation}
+
+\subsection{图的抽象数据类型}
+图G可看做由顶点(vertex)集合V和V中顶点对构成的边(edge)集合E组成。因此，图是表示
+集合V中对象之间的连接和关系的一种方式。而在一些书籍中，利用图的不同术语，
+把顶点称为节点(node),边称为弧(arc)。
+
+图中的边分为有向(directed)，和无向的(undirected)。如果$(u,v)$对是有序的，且$u$
+是$v$的前驱，则称从$u$到$v$的边$(u,v)$是有向的。如果$(u,v)$对是无序的，则称
+从$u$到$v$的边$(u,v)$是无向的。无向边有时用集合$\{u,v\}$表示，但简单起见，
+用$(u,v)$表示。对于无向的情况，$(u,v)$与$(v,u)$相同。图中通常把顶点可视化为
+圆或矩形，把边可视化为线段或曲线，用于把圆或矩形连接起来。
+
+% 
+% Artificial Intelligence (based on copy from my thesis)
+% 
+\subsection{Artificial Intelligence}
+\label{sec:artificial_intelligence}
+\index{Artificial Intelligence}
+
+
+% change title of bib to references
+

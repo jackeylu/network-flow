@@ -1,0 +1,87 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 
+%
+% The Clever Algorithms Project: http://www.CleverAlgorithms.com
+% (c) Copyright 2010 Jason Brownlee. Some Rights Reserved. 
+% This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 2.5 Australia License.
+
+% paperback.tex
+
+\documentclass[twoside, openright]{book}
+\include{definitions}
+\include{f_title_page}
+\makeindex
+
+% paperback only
+\geometry{bindingoffset=1cm, twoside, paperwidth=6in, paperheight=9in, top=.9in, bottom=.6667in, outer=0.667in}
+
+%\includeonly{f_copyright}
+
+\begin{document}
+\defaultbibliography{../workspace/bibtex}
+\frontmatter
+	\maketitle
+	\include{f_copyright}		%版权申明
+	\cleardoublepage\include{f_toc}
+	\addtocontents{toc}{\protect\markboth{Contents}{}}
+	%\cleardoublepage\include{f_foreword}%序
+	\cleardoublepage\include{f_preface}%前言
+	\cleardoublepage\include{f_acknowledgments}%致谢	
+\mainmatter 
+	\part{图论相关算法基础知识}
+		\include{c_graph_primer}
+
+	\part{Simple network problems and algorithms: The “pretty”}%第一部分
+		\include{c_Network_connectivity}		%引言
+		\include{c_Shortest_path}
+		\include{c_Max_flow_and_min_cut}
+		\include{c_Minimum_spanning_tree}
+		\include{c_Maximum_matching}
+			
+%Simple network problems and algorithms: The “pretty”
+%Difficult network problems
+%Computational complexity: The “theory”
+%Linear and integer programming: The “machinery”
+%Heuristic algorithms: The “ugly”
+
+	\part{Difficult network problems} %第二部分 算法
+% page 24
+%Looks simple but no polynomial algorithms exist (yet?)
+%The traveling salesman problem
+%Maximal independent set
+%Capacited minimal spanning tree
+%Multi-commodity network (integral) flow
+
+%		\include{c_stochastic}
+%		\include{c_evolution}
+%		\include{c_physical}
+%		\include{c_probabilistic}
+%		\include{c_swarm}
+%		\include{c_immune}
+%		\include{c_neural}
+	\part{Computational complexity: The “theory”}
+		\include{c_The_Theory_of_NP-Completeness}
+		\include{c_The_Comparative_Measure_of_Problem_Difficulty}
+		%\include{c_The_Theory_of_NP-Completeness}
+	\part{Linear and integer programming: The “machinery”}
+		\include{c_linear_programming}
+		\include{c_integer_programming}
+	\part{Heuristic algorithms: The “ugly”}
+		\include{c_heuristic_algorithms}
+	\part{附录}
+		\appendix
+		\include{b_appendix1}
+
+  % errata
+	\cleardoublepage\include{b_errata}	
+	
+	% correct handling of the index (new odd page)
+  \cleardoublepage
+  \phantomsection
+	\addcontentsline{toc}{part}{索引}
+	{\footnotesize \printindex}	
+	
+	% blank page
+	\blanknonumber\cleardoublepage
+	
+\end{document}

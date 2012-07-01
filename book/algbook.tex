@@ -1,0 +1,37 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt,a4paper]{ctexbook} 
+
+%\usepackage[utf8]{inputenc} % set input encoding to utf8
+
+\usepackage{amsmath} %Never write a paper without using amsmath for its many new commands 
+\usepackage{amssymb} %Some extra symbols 
+\usepackage{makeidx} %If you want to generate an index, automatically 
+\usepackage{graphicx} %If you want to include postscript graphics 
+\usepackage{hyperref}
+
+
+\begin{document} 
+
+\author{E. G. Goodaire} 
+\title{How to Write a Book} 
+\date{May 2002} 
+
+\frontmatter 
+\tableofcontents 
+\include{f_preface} 
+
+\mainmatter 
+\include{c_graph_primer} 
+\include{c_Shortest_path} 
+
+
+\appendix
+\backmatter 
+\include{b_appendix1} 
+\bibliographystyle{amsalpha} %The style you want to use for references. 
+\bibliography{refs} %The files containing all the articles and books you ever referenced. 
+\printindex %Make an index AUTOMATICALLY 
+
+\end{document}
