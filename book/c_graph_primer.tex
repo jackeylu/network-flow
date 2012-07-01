@@ -1,6 +1,5 @@
-% The Clever Algorithms Project: http://www.CleverAlgorithms.com
-% (c) Copyright 2010 Jason Brownlee. Some Rights Reserved. 
-% This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 2.5 Australia License.
+% (c) Copyright 2012 Lin Lu. Some Rights Reserved. 
+% This work is licensed under a Creative Commons Attribution-Share Alike 2.5 China Mainland License.
 
 % This is a chapter
 
@@ -15,10 +14,15 @@
 
 
 % 
-% What is AI
+% What is graph
 % 
 \section{图的表示}
 \label{intro:sec:graph:presentation}
+
+Graphs常见的可以分为undirected graphs(无向图), directed graphs(有向图),
+Weighted graphs(权重图), Hypergraphs(混合图). 前三者都好理解，最后一种
+则是指multiple relationships that may exist between the same two vertices
+($u$, $v$)。
 
 \subsection{图的抽象数据类型}
 图G可看做由顶点(vertex)集合V和V中顶点对构成的边(edge)集合E组成。因此，图是表示
