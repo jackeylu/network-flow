@@ -17,17 +17,6 @@ paperback : ${PAPERBACK}.tex
 	${TEX} ${PAPERBACK};true
 	grep -i "undefined" ${PAPERBACK}.log;true
 
-# Build the PDF for lulu
-lulu : ${PAPERBACK}.tex
-	xelatex ${PAPERBACK};true
-	./make_bibtex.sh;true	
-	xelatex ${PAPERBACK};true
-	xelatex ${PAPERBACK};true
-	makeindex ${PAPERBACK};true
-	xelatex ${PAPERBACK};true
-	xelatex ${PAPERBACK};true
-	grep -i "undefined" ${PAPERBACK}.log;true
-	ps2pdf13 -dPDFSETTINGS=/prepress paperback.pdf paperback1.pdf
 
 # Delete all the guff and build matter
 clean : 
