@@ -67,5 +67,26 @@ ACI报导说2005年共计有71.6 million 的航空活动，简单且粗暴地转
 中途不会在别的机场停下来，这整个的机场利用率也只有(196,164/2,752,281 = 0.07127324571873293460951116546603),空闲率达到了93\%,因此，这是一个典型的
 稀疏图实例。
 
-% change title of bib to references
+\subsection{Graph Analysis}
+在设计与图相关的算法的时候，必须要考虑合适的数据结构，常见的是邻接链表和邻接
+矩阵，具体选用哪一种，关键在于图是否是一个稀疏图。
 
+% TODO fix the length of table
+\newcommand{\minitab}[2][1]{\begin{tabular}{#1}#2\end{tabular}}
+\begin{table}
+\caption{Performance comparison of two algorithm variations}
+\label{tab:per:compar:graph:variations}
+\begin{tabularx}{12cm}{X|l|X|l}
+\toprule
+Graph type & O((V+E)*logV) & Comparison & O($V^2$+E) \\
+\midrule
+\minitab[c] {Sparse graph: \\ E is O(V)}
+ & O(V log V) & is smaller than & O($V^2$) \\
+\minitab[c]{Break-even graph:\\ E is O($V^2$/log V)}
+ & O($V^2$+V*log V)=O($V^2$) & is equivalent to & O($V^2 + V^2/log V$) = O($V^2$) \\
+\minitab[c] {Dense graph: \\ E is O($V^2$) } & O($V^2 log V$) 
+& is larger than & O($V^2$)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+% change title of bib to references
